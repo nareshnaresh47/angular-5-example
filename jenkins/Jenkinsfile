@@ -1,5 +1,7 @@
 pipeline{
-  agent { label 'nodejs8' }
+  agent {
+    docker { image 'node:latest' }
+  }
   stages{
     stage ('checkout'){
       steps{
